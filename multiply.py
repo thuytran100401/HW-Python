@@ -10,14 +10,18 @@ Parameter
 def multiply_list(inputList):
 
     result = 1; 
-    for number in inputList:
-        result = result * number
-            
+    for i in range(0, len(inputList)):
+        if int(i) == i:
+            inputList[i] = int(inputList[i])
+            result = result * inputList[i]
+        else:
+            return False
     return result
 
 # driver code
 inputList = []
-inputList =  list(map(int, input("Input: ").split()))
+inputList = [item for item in input("Input: ").split()]
+
 print("Input: ", inputList)
 
 print("Output: ", multiply_list(inputList))
