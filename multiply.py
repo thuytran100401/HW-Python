@@ -11,7 +11,7 @@ def multiply_list(inputList):
 
     result = 1; 
     for i in range(0, len(inputList)):
-        if int(i) == i:
+        if inputList[i].isdigit():
             inputList[i] = int(inputList[i])
             result = result * inputList[i]
         else:
