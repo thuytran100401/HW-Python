@@ -33,21 +33,16 @@ def calculator(number1, number2, operator):
 """
 Take the input to calculator and print out the input
 """
-def input_output():
-    while True:
-        try:
-            number1 = float(input('Enter the first number: '))
-            number2 = float(input('Enter the second number: '))
-            operator = input('Enter the operation: ')
-            print(calculator(number1, number2, operator))
-            while True:
-            	calc_again= input('Do you wish to continue?(y/n)')
-            	if calc_again =='y':
-                	print(input_output())
-            	elif calc_again == 'n':
-                	print('exit')
-                	quit()
-            	else:
-                	print('invalid input')
-        except ValueError:
-        	print('invalid input')
+def parse_input():
+    user_input = input("Enter equation: ")
+    user_input = user_input.strip().split(" ")
+
+    number1 = int(user_input[0])
+    number2 = int(user_input[2])
+    operator = user_input[1]
+
+
+    print(calculator(number1, number2, operator))
+
+
+
