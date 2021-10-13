@@ -20,7 +20,8 @@ def multiply_list(inputList):
 
 # driver code
 inputList = []
-inputList = [item for item in input("Input: ").split()]
+input = input("Input: ").split()
+inputList = [item for item in input]
 
 print("Input: ", inputList)
 
