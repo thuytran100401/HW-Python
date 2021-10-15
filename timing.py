@@ -5,7 +5,7 @@ Parameter
 func:
 	a function
 Return
-run time of the function.
+    run time of the function.
 """
 def calculate_time(func):
     """
