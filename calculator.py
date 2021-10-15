@@ -19,11 +19,11 @@ def calculator(number1, number2, operator):
         return number1 ** number2
     elif operator == '/':
         if number2 == 0:
-            return ValueError('invalid input')
+            return ValueError('invalid input',)
         return number1 / number2
     elif operator == '//':
         if number2 == 0:
-            return ValueError('invalid input')
+            return ValueError('invalid input',)
         return number1 // number2
     elif operator == '-':
         return number1 - number2
