@@ -11,11 +11,14 @@ def multiply_list(inputList):
 
     result = 1; 
     for i in range(0, len(inputList)):
-        if inputList[i].isdigit():
-            inputList[i] = int(inputList[i])
-            result = result * inputList[i]
-        else:
+        try:
+            int(inputList[i])
+        except: 
             return False
+
+    for number in inputList:
+        result = result * int(number)
+       
     return result
 
 
