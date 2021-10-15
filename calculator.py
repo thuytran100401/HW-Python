@@ -19,31 +19,31 @@ def calculator(number1, number2, operator):
         return number1 ** number2
     elif operator == '/':
         if number2 == 0:
-            return ValueError('invalid input')
+            return False
         return number1 / number2
     elif operator == '//':
         if number2 == 0:
-            return ValueError('invalid input')
+            return False
         return number1 // number2
     elif operator == '-':
         return number1 - number2
-    elif operator == '%':
-        return number1 % number2
     else:
-        return 'invalid input'
-
+        return False
 """
 Take the input to calculator and print out the input
+Parameter
+UserInput: string
+    equation enters by the user
 """
 def parse_input():
-    try:
-        user_input = input("Enter equation: ")
-        user_input = user_input.strip().split(" ")
+    try: 
+        UserInput = input("Enter equation: ")
+        UserInput = UserInput.strip().split(" ")
 
-        number1 = float(user_input[0])
-        number2 = float(user_input[2])
-        operator = user_input[1]
-
-        print(calculator(number1, number2, operator))
+        number1 = float(UserInput[0])
+        number2 = float(UserInput[2])
+        operator = UserInput[1]
     except ValueError:
-        print('invalid input')
+        print(False)
+
+       
