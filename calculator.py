@@ -4,9 +4,9 @@ Parameter
 number1: float
 	First number to calculate
 number2: float
-	second number to calculate
+	Second number to calculate
 operator: str
-	the operation
+	The operation
 Return
 	The number after calculate with the operation
 """
@@ -43,6 +43,8 @@ def parse_input():
         number1 = float(UserInput[0])
         number2 = float(UserInput[2])
         operator = UserInput[1]
+        print(calculator(number1,number2,operator))
+
     except ValueError:
         print(False)
 
