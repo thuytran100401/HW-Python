@@ -28,7 +28,7 @@ def calculator(number1, number2, operator):
     elif operator == '-':
         return number1 - number2
     else:
-        return False
+        return 'invalid input'
 
 """
 Take the input to calculator and print out the input
@@ -37,12 +37,9 @@ def parse_input():
     user_input = input("Enter equation: ")
     user_input = user_input.strip().split(" ")
 
-    number1 = int(user_input[0])
-    number2 = int(user_input[2])
+    number1 = float(user_input[0])
+    number2 = float(user_input[2])
     operator = user_input[1]
 
 
     print(calculator(number1, number2, operator))
-
-
-
