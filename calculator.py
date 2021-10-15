@@ -30,22 +30,28 @@ def calculator(number1, number2, operator):
     else:
         return False
 """
-Take the input to calculator and print out the input
+Take the input to calculator and print out the output
 Parameter
 UserInput: string
     equation enters by the user
+number1: float
+	First number to calculate
+number2: float
+	Second number to calculate
+operator: str
+	The operation
 """
 def parse_input():
     try: 
-        UserInput = input("Enter equation: ")
-        UserInput = UserInput.strip().split(" ")
+        userInput = input("Enter equation: ")
+        userInput = userInput.strip().split(" ")
 
-        number1 = float(UserInput[0])
-        number2 = float(UserInput[2])
-        operator = UserInput[1]
+        number1 = float(userInput[0])
+        number2 = float(userInput[2])
+        operator = userInput[1]
         print(calculator(number1,number2,operator))
 
     except ValueError:
         print(False)
 
-       
+parse_input()
