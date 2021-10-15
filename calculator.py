@@ -54,4 +54,3 @@ def parse_input():
     except ValueError:
         print(False)
 
-parse_input()
