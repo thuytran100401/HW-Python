@@ -36,12 +36,15 @@ def calculator(number1, number2, operator):
 Take the input to calculator and print out the input
 """
 def parse_input():
-    user_input = input("Enter equation: ")
-    user_input = user_input.strip().split(" ")
+    try:
+        user_input = input("Enter equation: ")
+        user_input = user_input.strip().split(" ")
 
-    number1 = float(user_input[0])
-    number2 = float(user_input[2])
-    operator = user_input[1]
+        number1 = float(user_input[0])
+        number2 = float(user_input[2])
+        operator = user_input[1]
 
 
-    print(calculator(number1, number2, operator))
+        print(calculator(number1, number2, operator))
+    except ValueError:
+        print('invalid input')
