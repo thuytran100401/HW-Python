@@ -1,8 +1,8 @@
 """ 
-Take a function to use three times
+Take a function to use on three times
 Parameter
 inner : function
-    function to use func(*agrs) three times
+    function to use func(*agrs) on three times
 """
 def tripler(func):
     def inner(*agrs):
