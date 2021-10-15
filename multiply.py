@@ -18,11 +18,4 @@ def multiply_list(inputList):
             return False
     return result
 
-# driver code
-inputList = []
-input = input("Input: ").split(" ")
-inputList = [item for item in input]
 
-print("Input: ", inputList)
-
-print("Output: ", multiply_list(inputList))
